@@ -1,0 +1,23 @@
+package com.app.service;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.app.dto.UserDTO;
+import com.app.dto.UserDTO.Users;
+import com.app.repository.UserRepository;
+
+public class UserServiceImpl implements UserService{
+	@Autowired
+	private UserRepository userRepo;
+	
+	@Autowired ModelMapper mapper;
+	
+
+	@Override
+	public UserDTO addUser(UserDTO dto) {
+		
+		return mapper.map(userRepo.save(mapper.map(dto,Users.class)),UserDTO.class);
+	}
+
+}

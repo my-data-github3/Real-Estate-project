@@ -1,0 +1,22 @@
+package com.app.entity;
+
+import javax.persistence.Entity;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Getter
+@Setter
+@ToString
+public class Users {
+	private String user_name;
+	private String email;
+	private String mobile;
+	private String Adhar;
+	private String role;
+	private String password;
+	
+
+}
