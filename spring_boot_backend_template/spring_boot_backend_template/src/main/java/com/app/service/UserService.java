@@ -1,5 +1,8 @@
 package com.app.service;
 
+import javax.validation.Valid;
+
+import com.app.dto.AuthRequestDTO;
 import com.app.dto.UserDTO;
 
 public interface UserService {
@@ -13,5 +16,7 @@ public interface UserService {
 //		String updateProductsById(UpdateProductPriceDto dto, Long productId);
 
 		 UserDTO addUser(UserDTO dto);
+
+		UserDTO authenticateUser( AuthRequestDTO dto);
 			
 	}

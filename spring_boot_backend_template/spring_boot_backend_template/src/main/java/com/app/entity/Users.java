@@ -2,6 +2,7 @@ package com.app.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
 import javax.persistence.*;
 
 import lombok.Getter;
@@ -13,19 +14,20 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Users extends BaseEntity{
-	@Column(name="user_name")
-
+	@Column(name="user_name" ,length=75,nullable=false,unique=true)
+	@NotBlank
 	private String name;
 	
 	@Column(length=75,nullable=false,unique=true)
+	@NotBlank
 	private String email;
 	
 	@Column(length=11,nullable=false,unique=true)
-	
+	@NotBlank
 	private String mobile;
 	
-@Column (length=16,nullable=false,unique=true)
-
+	@Column(length=16,nullable=false,unique=true)
+	@NotBlank
 	private String adhar;
 	private String role;
 	private String password;
