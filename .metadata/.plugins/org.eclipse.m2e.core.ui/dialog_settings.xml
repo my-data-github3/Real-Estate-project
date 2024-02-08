@@ -2,8 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="F:\cdac project\Real_state_project\Real-Estate-project\spring_boot_backend_template"/>
 			<item value="F:\cdac project\Real_state_project\Real-Estate-project\spring_boot_backend_template\spring_boot_backend_template"/>
+			<item value="F:\cdac project\Real_state_project\Real-Estate-project\spring_boot_backend_template"/>
 			<item value="F:\advanceJava\webjava\spring_boot_backend_template"/>
 			<item value="F:\cdac project\spring_boot_backend_template"/>
 		</list>
