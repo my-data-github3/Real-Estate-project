@@ -2,9 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
+import { useNavigate } from "react-router-dom";
 export default function Login(){
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
+    const[role,setRole]=useState("");
+    const navigate = useNavigate();
     
 
     // const handleSubmit=async(e)=>{
@@ -15,10 +18,17 @@ export default function Login(){
     //     }
     // }
 const  Login=()=>{
+    debugger
     const url = "http://localhost:8080/user/login";
-    axios.post(url, { email, password })
+    axios.post(url, { email, password,role })
     .then((response)=>{
-        alert("Login Success")}).catch((error)=>{
+        alert("Login Success");
+        if(response.data.email==='admin'){
+            navigate('/Admin');
+        }
+        
+    })
+        .catch((error)=>{
             console.log('error')
             console.log(error)
 

@@ -2,3 +2,50 @@
   color: white;
   background: #2196f3;
 }
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black
+}
+.logo{
+  width: 100px;
+  
+  }
+.nav-items > ul{
+display: flex;
+list-style-type: none;
+padding: 0px 20px;
+font-size: 24px;
+  }
+
+.nav-items >ul>li{
+      padding:10px;
+      margin: 10px
+  }
+.rest-card{
+  padding : 5px;
+  width: 200px;
+  height: 300px;
+  border: 1px solid gray;
+  margin: 15px;
+  background: #d6d0d09c;
+
+
+}   
+.rest-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.rest-card :hover{
+  border: 1px solid black;
+
+}
+.search{
+  padding: 20px;
+}
+.rest-logo{
+  width: 190px;
+
+}
