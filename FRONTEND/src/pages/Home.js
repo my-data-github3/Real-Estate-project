@@ -1,4 +1,5 @@
 import { useAuth } from "../context/auth";
+const url ="https://5.imimg.com/data5/PI/XV/MJ/ANDROID-84155764/product-jpeg-500x500.jpg";
 export default function Home() {
     const [auth, setAuth] = useAuth();
 
@@ -6,7 +7,8 @@ export default function Home() {
     const Propertycard=(props)=>{
         return (
           <div className='container'>
-            <img className='rest-logo' src='https://5.imimg.com/data5/PI/XV/MJ/ANDROID-84155764/product-jpeg-500x500.jpg' alt="logo"/>
+            
+            <img className='rest-logo' src={url} alt="logo"/>
       <h3>{props.propertyName}</h3>
       <h4> {props.propertyPrice}</h4>
      

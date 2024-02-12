@@ -18,14 +18,20 @@ export default function Login(){
     //     }
     // }
 const  Login=()=>{
-    debugger
+    debugger;
     const url = "http://localhost:8080/user/login";
     axios.post(url, { email, password,role })
     .then((response)=>{
         alert("Login Success");
-        if(response.data.email==='admin'){
+        if(response.data.role==='admin'){
             navigate('/Admin');
+        }else if(response.data.role==='buyer'){
+            navigate('/Buyer');
         }
+        else(response.data.role==='seller')
+            navigate('/Seller');
+        
+        
         
     })
         .catch((error)=>{
@@ -45,8 +51,8 @@ const  Login=()=>{
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 offset-lg-4">
-                        {/* <form onSubmit={handleSubmit}> */}
-                        <form action="http://localhost:8080/login" method="post">
+                        <form onSubmit={Login}> 
+                        
                         
 
                             <input type="text" placeholder="Enter your email" className="form-control" required autoFocus value={email} onChange={e=>setEmail(e.target.value)}/>
@@ -56,7 +62,7 @@ const  Login=()=>{
 
 
                             <input type="text" placeholder="Enter your password" className="form-control mb-4" required autoFocus value={password} onChange={e=>setPassword(e.target.value)}/>
-                            <button className="btn btn-primary col-12 mb-4" onClick={Login}>Login</button>
+                            <button className="btn btn-primary col-12 mb-4">Login</button>
 
                         </form>
                         <ToastContainer/>
