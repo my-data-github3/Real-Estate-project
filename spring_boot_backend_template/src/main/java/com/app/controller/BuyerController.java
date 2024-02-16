@@ -18,8 +18,12 @@ public class BuyerController {
 		
 		@PostMapping("/register")
 		public UserDTO addUser(@RequestBody UserDTO dto) {
+			System.out.println("In add user" + dto);
+			
+			
 			return userService.addUser(dto);
-			System.out.println("deddedddedede");
+			
+			
 		}
 //		@DeleteMapping("/{id}")
 //		public String deleteAppointment(@PathVariable Long id) {
