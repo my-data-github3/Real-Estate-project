@@ -19,6 +19,7 @@ public class BuyerController {
 		@PostMapping("/register")
 		public UserDTO addUser(@RequestBody UserDTO dto) {
 			return userService.addUser(dto);
+			System.out.println("deddedddedede");
 		}
 //		@DeleteMapping("/{id}")
 //		public String deleteAppointment(@PathVariable Long id) {
@@ -26,6 +27,6 @@ public class BuyerController {
 //		}
 //		@GetMapping("/doctor/{id}")
 //		public List<Appointmnet> getAllAppointmentById(@PathVariable Long id){
-//			return appService.getAllAppointmentById(id);
+//			return abdfbdbdfbdbppService.getAllAppointmentById(id);
 		}
 }
