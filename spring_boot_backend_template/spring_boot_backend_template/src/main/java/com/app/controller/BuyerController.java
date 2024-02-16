@@ -18,6 +18,7 @@ public class BuyerController {
 		
 		@PostMapping("/register")
 		public UserDTO addUser(@RequestBody UserDTO dto) {
+			System.out.println("in register");
 			return userService.addUser(dto);
 		}
 //		@DeleteMapping("/{id}")
