@@ -19,6 +19,8 @@ public class BuyerController {
 		@PostMapping("/register")
 		public UserDTO addUser(@RequestBody UserDTO dto) {
 			return userService.addUser(dto);
+System.Out.Println("dqwdqwdq");
+
 		}
 //		@DeleteMapping("/{id}")
 //		public String deleteAppointment(@PathVariable Long id) {
